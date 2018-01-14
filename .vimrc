@@ -13,10 +13,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'python-mode/python-mode'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'morhetz/gruvbox'
+Plugin 'pangloss/vim-javascript'
+Plugin 'maksimr/vim-jsbeautify'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -39,6 +40,9 @@ augroup BgHighlight
     autocmd WinLeave * set norelativenumber 
     autocmd WinLeave * set nonumber 
 augroup END"
+"Indent setting
+set noet ci pi sts=0 sw=4 ts=4
+
 "NO FUCKING BEEEEEP
 set noeb vb t_vb=
 
@@ -58,7 +62,5 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
-nnoremap <C-/> :ConqueTermSplit su bash<CR> 
-nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
 
